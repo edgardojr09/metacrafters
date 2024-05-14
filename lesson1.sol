@@ -1,7 +1,7 @@
 //SPDX-License-Identifier:MIT
 pragma solidity ^0.8.25;
 
-contract Admin{
+contract Administrator{
     
     address public owner;
 
@@ -10,7 +10,7 @@ contract Admin{
     }
 
     modifier onlyowner{
-        require(owner == msg.sender, "Limited acces for Owner only");
+        require(owner == msg.sender, "Limited access for Owner only");
         _;
     }
 }
